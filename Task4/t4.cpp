@@ -5,7 +5,7 @@
 using namespace std;
 
 
-static int max3(int a1, int b1, int c1){
+static int max3(int a1, int b1, int c1) {
     return max(max(a1, b1), c1);
 }
 
@@ -31,7 +31,7 @@ int main(int argc, char* argv[])
 
     int sr1 = a + b + c - max3(a, b, c) - min3(a, b, c);
     int sr2 = x + y + h - max3(x, y, h) - min3(x, y, h);
-    
+
     //int rast = pow(((x - a) * (x - a)) + ((y - b) * (y - b)), 0.5);
 
     if ((min3(a, b, c) < min3(x, y, h) and max3(a, b, c) <= max3(x, y, h) and sr1 <= sr2) or (min3(a, b, c) <= min3(x, y, h) and max3(a, b, c) < max3(x, y, h) and sr1 <= sr2) or (min3(a, b, c) <= min3(x, y, h) and max3(a, b, c) <= max3(x, y, h) and sr1 < sr2)) {
